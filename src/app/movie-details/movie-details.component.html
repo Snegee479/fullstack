@@ -1,1 +1,27 @@
-<p>movie-details works!</p>
+<h2>Movie Details</h2> 
+
+<hr/>
+<div *ngIf="movie">
+  <div>
+    <label><b>Movie Name: </b></label> {{movie.movieName}}
+  </div>
+  <div>
+    <label><b>Category: </b></label> {{movie.category}}
+  </div>
+  <div>
+    <label><b>Movie Description: </b></label> {{movie.movieDescription}}
+  </div> 
+  <div>
+    <label><b>Ticket Price: </b></label> {{movie.ticketPrice}}
+  </div>
+  <div>
+    <label><b>Active Status: </b></label> {{movie.activeStatus}}
+  </div>
+  <div>
+    <label><b>Language: </b></label> {{movie.language}}
+  </div> 
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Movies List</button><br>

@@ -1,1 +1,36 @@
-<p>update-movies works!</p>
+<h3>Update Movie</h3>
+<div style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="name">Movie Name</label>
+        <input type="text" class="form-control" id="movieName" required [(ngModel)]="movie.movieName" name="movieName">
+      </div>
+  
+      <div class="form-group">
+        <label for="name">Category</label>
+        <input type="text" class="form-control" id="category" required [(ngModel)]="movie.category" name="category">
+      </div>
+  
+      <div class="form-group">
+        <label for="name">Movie Description</label>
+        <input type="text" class="form-control" id="movieDescription" required [(ngModel)]="movie.movieDescription" name="movieDescription">
+      </div>
+  
+      <div class="form-group">
+          <label for="name">Ticket Price</label>
+          <input type="text" class="form-control" id="ticketPrice" required [(ngModel)]="movie.ticketPrice" name="ticketPrice">
+        </div>
+  
+        <div class="form-group">
+          <label for="name">Active Status</label>
+          <input type="text" class="form-control" id="activeStatus" required [(ngModel)]="movie.activeStatus" name="activeStatus">
+        </div>
+  
+        <div class="form-group">
+          <label for="name">Language</label>
+          <input type="text" class="form-control" id="language" required [(ngModel)]="movie.language" name="language">
+        </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
