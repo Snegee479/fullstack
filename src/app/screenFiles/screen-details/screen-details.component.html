@@ -1,0 +1,23 @@
+<h2>Screen Details</h2> 
+
+<hr/> 
+<div *ngIf="screen">
+  <div>
+    <label><b>Screen Name: </b></label> {{screen.screenName}}
+  </div>
+  <div>
+    <label><b>Total No Of Seats: </b></label> {{screen.totalNoOfSeats}}
+  </div>
+  <div>
+    <label><b>Theater Details: </b></label> {{screen.theater.theaterName}}
+  </div> 
+  <div>
+    <label><b>Movie Details: </b></label> {{screen.movie.movieName}}
+  </div>
+  <div>
+    <label><b>Ticket Details: </b></label> {{screen.movie.ticketPrice}}
+  </div>
+  
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Screen List</button><br>

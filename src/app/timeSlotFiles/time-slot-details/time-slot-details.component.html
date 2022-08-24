@@ -1,0 +1,23 @@
+<h2>TimeSlot Details</h2> 
+
+<hr/> 
+<div *ngIf="timeSlot">
+  <div>
+    <label><b>Screen Name: </b></label> {{timeSlot.screen.screenName}}
+  </div>
+  <div>
+    <label><b>Theater Details: </b></label> {{timeSlot.screen.theater.theaterName}}
+  </div>
+      <div>
+    <label><b>Start Time: </b></label> {{timeSlot.startTiming}}
+  </div>
+  <div>
+    <label><b>End Time: </b></label> {{timeSlot.endTiming}}
+  </div> 
+  <div>
+    <label><b>Movie Details: </b></label> {{timeSlot.screen.movie.movieName}}
+  </div>
+  
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to TimeSlot List</button><br>

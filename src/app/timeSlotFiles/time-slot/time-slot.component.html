@@ -1,0 +1,33 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>TimeSlot List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Start Time</th>
+            <th>End Time</th>
+            <th>Screen Name</th>
+            <th>Screen id</th>
+            <th>Theater Name</th>
+            <th>Movie Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let t of timeSlot | async">
+            <td>{{t.startTiming}}</td>
+            <td>{{t.endTiming}}</td>
+            <td>{{t.screen.screenName}}</td>
+            <td>{{t.screen.screenId}}</td>
+            <td>{{t.screen.movie.movieName}}</td>
+            <td>{{t.screen.theater.theaterName}}</td>
+            <td><button (click)="deleteTimeSlot(t.timeId)" class="btn btn-danger">Delete</button>
+                <button (click)="updateTimeSlot(t.timeId)" class="btn btn-info" style="margin-left: 10px">Update</button>
+                <button (click)="findByTimeId(t.timeId)" class="btn btn-info" style="margin-left: 10px">Details</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div> 

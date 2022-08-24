@@ -1,0 +1,23 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Theater List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Theater Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let t of theater | async">
+            <td>{{t.theaterName}}</td>
+            <td><button (click)="deleteTheater(t.theaterId)" class="btn btn-danger">Delete</button>
+                <button (click)="updateTheater(t.theaterId)" class="btn btn-info" style="margin-left: 10px">Update</button>
+                <button (click)="findByTheaterId(t.theaterId)" class="btn btn-info" style="margin-left: 10px">Details</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

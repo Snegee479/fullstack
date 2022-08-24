@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class TheaterService {
   private baseUrl = 'http://localhost:8080/getAllTheater';
   private insertUrl='http://localhost:8080/insertTheater';
-  private upadteURL='http://localhost:8080/updateTheater';
+  private updateURL='http://localhost:8080/updateTheater';
   private findbyidUrl='http://localhost:8080/findByTheaterId';
   private deleteURL='http://localhost:8080/deleteTheater';
   constructor(private http: HttpClient) { }
@@ -22,7 +22,7 @@ export class TheaterService {
   }
 
   updateTheater(id: number, value: any): Observable<Object> {
-    return this.http.put(`${this.upadteURL}/${id}`, value);
+    return this.http.put(`${this.updateURL}/${id}`, value);
   }
 
   deleteTheater(id: number): Observable<any> {

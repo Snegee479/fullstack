@@ -1,0 +1,29 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Screen List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Screen Name</th>
+            <th>Total No Of Seats</th>
+            <th>Theater Name</th>
+            <th>Movie Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let s of screenList">
+            <td>{{s.screenName}}</td>
+            <td>{{s.totalNoOfSeats}}</td>
+            <td>{{s.theater.theaterName}}</td>
+            <td>{{s.movie.movieName}}</td>
+            <td><button (click)="deleteScreen(s.screenId)" class="btn btn-danger">Delete</button>
+                <button (click)="updateScreen(s.screenId)" class="btn btn-info" style="margin-left: 10px">Update</button>
+                <button (click)="findByScreenId(s.screenId)" class="btn btn-info" style="margin-left: 10px">Details</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div> 
+  </div>

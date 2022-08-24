@@ -1,0 +1,27 @@
+<h3>Insert TimeSlots</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Start Time</label>
+      <input type="text" class="form-control" id="startTiming" required [(ngModel)]="timeSlot.startTiming" name="startTiming">
+    </div>
+
+    <div class="form-group">
+      <label for="name">End Time</label>
+      <input type="text" class="form-control" id="endTiming" required [(ngModel)]="timeSlot.endTiming" name="endTiming">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Screen Id</label>
+      <input type="text" class="form-control" id="screenId" required [(ngModel)]="timeSlot.screen.screenId" name="screenId">
+    </div>
+
+  
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted timeslot details successfully!</h4>
+  <!-- <button class="btn btn-success" (click)="newTimeSlot()">Add</button> -->
+</div>

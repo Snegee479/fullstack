@@ -1,0 +1,12 @@
+<h2>Movie Details</h2> 
+
+<hr/>
+<div *ngIf="theater">
+  <div>
+    <label><b>Theater Name: </b></label> {{theater.theaterName}}
+  </div>
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Theater List</button><br>

@@ -1,0 +1,27 @@
+<h3>Update Screen</h3>
+<div style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="name">Screen Name</label>
+        <input type="text" class="form-control" id="screenName" required [(ngModel)]="screen.screenName" name="screenName">
+      </div> 
+  
+      <div class="form-group">
+        <label for="name">Total No Of Seats</label>
+        <input type="text" class="form-control" id="totalNoOfSeats" required [(ngModel)]="screen.totalNoOfSeats" name="totalNoOfSeats">
+      </div>
+  
+      <div class="form-group">
+        <label for="name">Theater Id</label>
+        <input type="text" class="form-control" id="theaterId" required [(ngModel)]="screen.theater.theaterId" name="theaterId">
+      </div>
+  
+      <div class="form-group">
+          <label for="name">Movie Id</label>
+          <input type="text" class="form-control" id="movieId" required [(ngModel)]="screen.movie.movieId" name="movieId">
+        </div>
+    
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
